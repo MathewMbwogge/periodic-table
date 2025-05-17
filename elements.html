@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--I want to control the browser's resizing behaviour such that containing block resizes when the viewport resizes-->
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1 shrink-to-fit=no" />
+    <!--For best practice, I linking my created external styling file to this html file-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--I'm giving a name to my web page as period table-->
+    <title>Periodic Table</title>
+    <!--Adding a picture tag and associated media query to notify users of different screen sizes-->
+    <picture>
+        <source srcset="large-image.png" media="(min-width: 900px)" alt="image for large divices" />
+        <source srcset="medium-image.png" media="(min-width: 700px)" alt="image for medium devices" />
+        <img src="small-image.png" alt="image for small divices" style="width: auto;" />
+    </picture>
+</head>
+<body>
+    <!--I am adding my defined content fading class to the main part of my website.-->
+    <main class="content fade">
+        <header>
+            <fieldset>
+                <legend><h1>Periodic Table of Elements</h1></header></legend>
+            </fieldset>
+        </header>
+        <!--To generate a responsive key to my period table that users can play around with to discover different parts of the table and element groups.-->
+        <h2>Element Filter</h2>
+        <nav>
+            <h3>
+            <label><input type="radio" name="filter" checked/>All Elements</label>
+            <label><input type="radio" id="nonmet" name="filter"/>Nonmetals</label>
+            <label><input type="radio" id="alkamet" name="filter"/>Alkali Metals</label>
+            <label><input type="radio" id="alkemet" name="filter"/>Alkaline Earth Metals</label>
+            <label><input type="radio" id="transmet" name="filter"/>Transition Metals</label>
+            <label><input type="radio" id="ptransmet" name="filter"/>Post-Transition Metals</label>
+            <label><input type="radio" id="meta" name="filter"/>Metalloids</label>
+            <label><input type="radio" id="halo" name="filter"/>Halogens</label>
+            <label><input type="radio" id="nogas" name="filter"/>Noble Gases</label>
+            <label><input type="radio" id="lantha" name="filter"/>Lanthanoids</label>
+            <label><input type="radio" id="acti" name="filter"/>Actinoids</label>
+            </h3>
+        </nav>
+        <hr>
+        <!--Each row of my periodic table will constitute a major section of my web page and associating them to a defined flex contatiner. The table has 18 columns and 9 rows, filled from left to rifht-->
+        <section class="flex-container">
+            <a class="flex-item nonmet">1<br><b>H</b><br>Hydrogen</a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item nogas">2<br><b>He</b><br>Helium</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">3<br><b>Li</b><br>Lithium</a>
+            <a class="flex-item alkemet">4<br><b>Be</b><br>Beryllium</a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item meta">5<br><b>B</b><br>Boron</a>
+            <a class="flex-item nonmet">6<br><b>C</b><br>Carbon</a>
+            <a class="flex-item nonmet">7<br><b>N</b><br>Nitrogen</a>
+            <a class="flex-item nonmet">8<br><b>O</b><br>Oxygene</a>
+            <a class="flex-item halo">9<br><b>F</b><br>Fluorine</a>
+            <a class="flex-item nogas">10<br><b>Ne</b><br>Neon</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">11<br><b>Na</b><br>Sodium</a>
+            <a class="flex-item alkemet">12<br><b>Mg</b><br>Magnesium</a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></sa>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item ptransmet">13<br><b>Al</b><br>Aluminum</a>
+            <a class="flex-item meta">14<br><b>Si</b><br>Silicon</a>
+            <a class="flex-item nonmet">15<br><b>P</b><br>Phosphorus</a>
+            <a class="flex-item nonmet">16<br><b>S</b><br>Sulfur</a>
+            <a class="flex-item halo">17<br><b>Cl</b><br>Clorine</a>
+            <a class="flex-item nogas">18<br><b>Ar</b><br>Argon</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">19<br><b>K</b><br>Potassium</a>
+            <a class="flex-item alkemet">20<br><b>Ca</b><br>Calcium</a>
+            <a class="flex-item transmet">21<br><b>Sc</b><br>Scandium</a>
+            <a class="flex-item transmet">22<br><b>Ti</b><br>Titanium</a>
+            <a class="flex-item transmet">23<br><b>V</b><br>Vanadium</a>
+            <a class="flex-item transmet">24<br><b>Cr</b><br>Chromium</a>
+            <a class="flex-item transmet">25<br><b>Mn</b><br>Manganese</a>
+            <a class="flex-item transmet">26<br><b>Fe</b><br>Iron</a>
+            <a class="flex-item transmet">27<br><b>Co</b><br>Cobalt</a>
+            <a class="flex-item transmet">28<br><b>Ni</b><br>Nickel</a>
+            <a class="flex-item transmet">29<br><b>Cu</b><br>Copper</a>
+            <a class="flex-item transmet">30<br><b>Zn</b><br>Zinc</a>
+            <a class="flex-item ptransmet">31<br><b>Ga</b><br>Gallium</a>
+            <a class="flex-item meta">32<br><b>Ge</b><br>Germanium</a>
+            <a class="flex-item meta">33<br><b>As</b><br>Arsenic</a>
+            <a class="flex-item nonmet">34<br><b>Se</b><br>Selenium</a>
+            <a class="flex-item halo">35<br><b>Br</b><br>Bromine</a>
+            <a class="flex-item nogas">36<br><b>Kr</b><br>Krypton</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">37<br><b>Rb</b><br>Rubidium</a>
+            <a class="flex-item alkemet">38<br><b>S</b><br>Strontiumr</a>
+            <a class="flex-item transmet">39<br><b>Y</b><br>Yttrium</a>
+            <a class="flex-item transmet">40<br><b>Zr</b><br>Zirconium</a>
+            <a class="flex-item transmet">41<br><b>Nb</b><br>Niobium</a>
+            <a class="flex-item transmet">42<br><b>Mo</b><br>Molybdenum</a>
+            <a class="flex-item transmet">43<br><b>Tc</b><br>Technetium</a>
+            <a class="flex-item transmet">44<br><b>Ru</b><br>Ruthenium</a>
+            <a class="flex-item transmet">45<br><b>Rh</b><br>Rhodium</a>
+            <a class="flex-item transmet">46<br><b>Pd</b><br>Palladium</a>
+            <a class="flex-item transmet">47<br><b>Ag</b><br>Silver</a>
+            <a class="flex-item transmet">48<br><b>Cd</b><br>Cadmium</a>
+            <a class="flex-item ptransmet">49<br><b>In</b><br>Indium</a>
+            <a class="flex-item ptransmet">50<br><b>Sn</b><br>Tin</a>
+            <a class="flex-item meta">51<br><b>Sb</b><br>Antimony</a>
+            <a class="flex-item meta">52<br><b>Te</b><br>Tellurium</a>
+            <a class="flex-item halo">53<br><b>I</b><br>Iodine</a>
+            <a class="flex-item nogas">54<br><b>Xe</b><br>Xenon</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">55<br><b>Cs</b><br>Cesium</a>
+            <a class="flex-item alkemet">56<br><b>Br</b><br>Barium</a>
+            <a class="flex-item lantha">57 - 71<br>Lanthanoids</a>
+            <a class="flex-item transmet">72<br><b>Hf</b><br>Hafnium</a>
+            <a class="flex-item transmet">73<br><b>Ta</b><br>Tantalum</a>
+            <a class="flex-item transmet">74<br><b>W</b><br>Tungsten</a>
+            <a class="flex-item transmet">75<br><b>Re</b><br>Rhenium</a>
+            <a class="flex-item transmet">76<br><b>Os</b><br>Osmium</a>
+            <a class="flex-item transmet">77<br><b>Ir</b><br>Iridium</a>
+            <a class="flex-item transmet">78<br><b>Pt</b><br>Platinum</a>
+            <a class="flex-item transmet">79<br><b>Au</b><br>Gold</a>
+            <a class="flex-item transmet">80<br><b>Hg</b><br>Mercury</a>
+            <a class="flex-item ptransmet">81<br><b>Tl</b><br>Thallium</a>
+            <a class="flex-item ptransmet">82<br><b>Pb</b><br>Lead</a>
+            <a class="flex-item ptransmet">83<br><b>Bi</b><br>Bismuth</a>
+            <a class="flex-item meta">84<br><b>Po</b><br>Polonium</a>
+            <a class="flex-item halo">85<br><b>At</b><br>Astatine</a>
+            <a class="flex-item nogas">86<br><b>Rn</b><br>Radon</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item alkamet">87<br><b>Fr</b><br>Francium</a>
+            <a class="flex-item alkemet">88<br><b>Ra</b><br>Radium</a>
+            <a class="flex-item acti">89 - 103<br>Actinoids</a>
+            <a class="flex-item transmet">104<br><b>Rf</b><br>Rutherfordium</a>
+            <a class="flex-item transmet">105<br><b>Db</b><br>Dubnium</a>
+            <a class="flex-item transmet">106<br><b>Sg</b><br>Seaborgium</a>
+            <a class="flex-item transmet">107<br><b>Bh</b><br>Bohrium</a>
+            <a class="flex-item transmet">108<br><b>Hs</b><br>Hassium</a>
+            <a class="flex-item transmet">109<br><b>Mt</b><br>Meitnerium</a>
+            <a class="flex-item transmet">110<br><b>Ds</b><br>Darmstadtium</a>
+            <a class="flex-item transmet">111<br><b>Rg</b><br>Roentgenium</a>
+            <a class="flex-item transmet">112<br><b>Cn</b><br>Copernicium</a>
+            <a class="flex-item ptransmet">113<br><b>Nh</b><br>Nihonium</a>
+            <a class="flex-item ptransmet">114<br><b>Fl</b><br>Flerovium</a>
+            <a class="flex-item ptransmet">115<br><b>Mc</b><br>Moscovium</a>
+            <a class="flex-item ptransmet">116<br><b>Lv</b><br>Livermorium</a>
+            <a class="flex-item halo">117<br><b>Ts</b><br>Tennessine</a>
+            <a class="flex-item nogas">118<br><b>Og</b><br>Oganesson</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item lantha">57<br><b>La</b><br>Lanthanum</a>
+            <a class="flex-item lantha">58<br><b>Ce</b><br>Cerium</a>
+            <a class="flex-item lantha">59<br><b>Pr</b><br>Praseodymium</a>
+            <a class="flex-item lantha">60<br><b>Nd</b><br>Neodymium</a>
+            <a class="flex-item lantha">61<br><b>Pm</b><br>Promethium</a>
+            <a class="flex-item lantha">62<br><b>Sm</b><br>Samarium</a>
+            <a class="flex-item lantha">63<br><b>Eu</b><br>Europium</a>
+            <a class="flex-item lantha">64<br><b>Gd</b><br>Gadolinium</a>
+            <a class="flex-item lantha">65<br><b>Tb</b><br>Terbium</a>
+            <a class="flex-item lantha">66<br><b>Dy</b><br>Dysprosium</a>
+            <a class="flex-item lantha">67<br><b>Ho</b><br>Holmium</a>
+            <a class="flex-item lantha">68<br><b>Er</b><br>Erbium</a>
+            <a class="flex-item lantha">69<br><b>Tm</b><br>Thulium</a>
+            <a class="flex-item lantha">70<br><b>Yb</b><br>Ytterbium</a>
+            <a class="flex-item lantha">71<br><b>Lu</b><br>Lutetium</a>
+        </section>
+        <section class="flex-container">
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item flex-border"><br></a>
+            <a class="flex-item acti">89<br><b>Ac</b><br>Actinium</a>
+            <a class="flex-item acti">90<br><b>Th</b><br>Thorium</a>
+            <a class="flex-item acti">91<br><b>Pa</b><br>Protactinium</a>
+            <a class="flex-item acti">92<br><b>U</b><br>Uranium</a>
+            <a class="flex-item acti">93<br><b>Np</b><br>Neptunium</a>
+            <a class="flex-item acti">94<br><b>Pu</b><br>Plutonium</a>
+            <a class="flex-item acti">95<br><b>Am</b><br>Americium</a>
+            <a class="flex-item acti">96<br><b>Cm</b><br>Curium</a>
+            <a class="flex-item acti">97<br><b>Bk</b><br>Berkelium</a>
+            <a class="flex-item acti">98<br><b>Cf</b><br>Californium</a>
+            <a class="flex-item acti">99<br><b>Es</b><br>Einsteinium</a>
+            <a class="flex-item acti">100<br><b>Fm</b><br>Fermium</a>
+            <a class="flex-item acti">101<br><b>Md</b><br>Mendelevium</a>
+            <a class="flex-item acti">102<br><b>No</b><br>Nobelium</a>
+            <a class="flex-item acti">103<br><b>Lr</b><br>Lawrencium</a>
+        </section>
+            <!--References-->
+            <!--Creating Effects That Appear and Disappear Using CSS (2024) Linkysoft. Available at: https://www.linkysoft.com/knowledgebase/453/Creating-Effects-That-Appear-and-Disappear-Using-CSS.html?language=english (Accessed: 21 December 2024).
+            Hyperiondev (2024) T02-Getting Started with Your Bootcamp and HTML, Github. Available at: https://github.com/hyperiondev-bootcamps/MM24110016008/tree/main/T02 – Getting Started with Your Bootcamp and HTML (Accessed: 9 December 2024).
+            HyperioDev (2024) T04 – Responsive Web Design, GitHub. Available at: https://github.com/hyperiondev-bootcamps/MM24110016008/blob/main/T04 – Responsive Design/05-010_Responsive Web Design.pdf (Accessed: 21 December 2024).
+            MDN (2024) CSS grid layout, Mozilla.org. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids#A_CSS_Grid_grid_framework (Accessed: 17 December 2024).
+            National Center for Biotechnology Information (2024) Periodic Table of Elements - PubChem, PubChem. Available at: https://pubchem.ncbi.nlm.nih.gov/periodic-table/#view=table&property=GroupBlock (Accessed: 19 December 2024).
+            Pollard, B. (2022) Setting Height And Width On Images Is Important Again, Smashing Magazine. Available at: https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/ (Accessed: 21 December 2024).
+            Prohaska, T. et al. (2022) ‘Standard atomic weights of the elements 2021 (IUPAC Technical Report)’, Pure and Applied Chemistry, 94(5), pp. 573–600. Available at: https://doi.org/10.1515/pac-2019-0603.
+            Rubin, S. (2018) Wrapping and Hovering a Full Width Navbar with Flexbox, Samrubin. Available at: https://samrubin.co/blog/wrapping-hovering-a-full-width-navbar-with-flexbox (Accessed: 21 December 2024).
+            SheCodes (no date) [HTML] - How to use an image as a link in HTML, SheCodes. Available at: https://www.shecodes.io/athena/77448-how-to-use-an-image-as-a-link-in-html#google_vignette (Accessed: 10 December 2024).
+            Singh, M. (2023) How to Swap Elements based on Screen Size using CSS: A quick tip for responsive design, Frontend Weekly. Available at: https://medium.com/front-end-weekly/how-to-swap-elements-based-on-screen-size-using-css-b01ec4984ef2 (Accessed: 21 December 2024).
+            Stoumann, M. (2024) The Periodic Table in CSS - DEV Community, Dev. Available at: https://dev.to/madsstoumann/the-periodic-table-in-css-3lmm (Accessed: 21 December 2024).
+            W3Schools (no date) HTML Color Names, W3Schools. Available at: https://www.w3schools.com/tags/ref_colornames.asp (Accessed: 10 December 2024).
+            Wilkins, J. (no date) How to Indent HTML Code – And Why it’s Important, FreeCodeCamp.org. Available at: https://www.freecodecamp.org/news/how-to-indent-in-html-and-why-it-is-important/ (Accessed: 10 December 2024).-->
+    </main>
+    <footer>
+        <p>Copyright ©Mathew Mbwogge 2024 All rights reserved</p>
+        <p>Cloud Web Development</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,331 @@
+body {
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    padding: 2px;
+}
+/* To specify the width and height of my flexboxes */
+* {
+    box-sizing: border-box;
+}
+/* To format the title of the web page */
+header { 
+    text-align: center;
+    color: darkblue;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 1px;
+    font-size: 1vw;
+}
+/* I am trying to gain as much space fo the table as possible */
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 2vw;
+    color: crimson;
+}
+
+h3 {
+    display: flex;
+    font-size: 1.13vw;
+    margin: 0;
+    padding: 0;
+}
+/* These are the parameters of the navigation key to my table */
+nav {
+    background-color: darkblue;
+    border: 1px solid black;
+    color: white;
+    padding: 2px;
+    display: flex;
+    width: 98.5vw;
+    height: 70vh auto;
+    max-width: fit-content;
+}
+/* The below class and media query is to specify a level of trigger at which the web page will change in response to different screen sizes. When a screensize width of 700px is attained, the background color of the web page will change to blueviolet */
+.content {
+    margin: 0;
+    width: 98.5vw;
+    height: 70vh auto;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 700px)  {
+    .content {
+        margin: 15vh auto;
+        width: 80vw;
+        height: 70vh auto;
+        background-color: blueviolet;
+    }
+}
+/* These are the parameters of the picture attributes that will be used to offset the web page content in response to different screen sizes */
+picture {
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
+    display: block; width: 80%;
+    border: 5px solid black;
+}
+/* To specify the maximum atainable size of each image used in the web page, using a max-width property */
+picture > * {
+    max-width: 100%;
+}
+/* The fade key and its media query will call up different image sizes at each breakpoint triggered by different screen sizes. Most importantly, at a sreen size of 900px, the web page content will fade out and give way for an image selected based on the specific screen size. */
+.fade {
+    visibility: visible;
+    opacity: 0.5s;
+    transform: scale(0.5s);
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 900px) {
+    .fade {
+        display: none;
+        transition: opacity 0.3s;;
+    }
+}
+/* I want a more interactive table key, able to highlight and grow upon hover with changing mouse pointer. */
+label:hover {
+    text-align: center;
+    align-content: center;
+    transform: scale(1.5);
+    margin: 0 0 0 1px;
+    cursor: pointer;
+    background-color: cyan;
+    color: blue;
+    font-size: 1.5vw;
+    max-width: fit-content;
+}
+/* In the below, any part of the body of the web page containing an element with a given id that has been checked (say "nonmet" for Nonmetals), the properties of all other parts of the web page will change exempting elemets of that particular class, allowing the class to stand out and highlight. */
+body:has(#nonmet:checked) a:not(.nonmet),
+body:has(#alkamet:checked) a:not(.alkamet),
+body:has(#alkemet:checked) a:not(.alkemet),
+body:has(#transmet:checked) a:not(.transmet),
+body:has(#ptransmet:checked) a:not(.ptransmet),
+body:has(#meta:checked) a:not(.meta),
+body:has(#halo:checked) a:not(.halo),
+body:has(#nogas:checked) a:not(.nogas),
+body:has(#lantha:checked) a:not(.lantha),
+body:has(#acti:checked) a:not(.acti) {
+  opacity: 0.2;
+  pointer-events: all;
+}
+/* The below will dictate the changing properties of the table based on the above explanation */
+body:has(#brb:checked) {
+    background: radial-gradient(circle, hsl(90, 67%, 22%) 10%, hsl(84, 71%, 7%) 40%, hsl(90, 100%, 8%) 100%);
+    background-size: cover;
+    color: #FFFFFF;
+
+    a:not(:nth-of-type(35),:nth-of-type(56)) {
+      --scale: 1;
+      background-color: whitesmoke;
+      color: hsla(120, 6%, 26%, .85);
+    }
+
+    a:is(a:nth-of-type(35),:nth-of-type(56)) {
+      background: linear-gradient(135deg, #3E8467, #101F15);
+      scale: var(--scale);
+    }
+}
+/* Defining the properties of the container made up of flexboxes (items). */
+.flex-container {
+    display: flex;
+    flex-flow: wrap;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    text-align: center;
+    align-content: center;
+    border: 1px solid black;
+    width: 2vw;
+    height: 4vw;
+    margin: 1px;
+    padding:1px;
+    font-size: 2vh;
+    flex: 1;
+}
+/* I want my flexboxes to highlight and pullout upon hover for better visibility and engagement. */
+.flex-item:hover {
+    flex: 1.5;
+    z-index: 2;
+    transform: scale(1.35);
+    width: 2vw;
+    height: 4vw;
+    cursor: pointer;
+}
+
+.flex-border {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+}
+
+/* Defining classes for different element groups with their hover behavior requirements. */
+.nonmet {
+    background-color: rgb(249, 255, 171);
+}
+
+.nonmet:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.nonmet:hover::after {
+    content:"Nonmetal";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.alkamet {
+    background-color: rgb(255, 188, 198);
+}
+
+.alkamet:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.alkamet:hover::after {
+    content:"Alkali Metal";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.alkemet {
+    background-color: rgb(231, 206, 255);
+}
+
+.alkemet:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.alkemet:hover::after {
+    content:"Alkaline Earth Metal";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.transmet {
+    background-color: rgb(199, 220, 255);
+}
+
+.transmet:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.transmet:hover::after {
+    content:"Transition Metal";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.ptransmet {
+    background-color: rgb(151, 255, 170);
+}
+
+.ptransmet:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.ptransmet:hover::after {
+    content:"Post-Transition Metal";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.meta {
+    background-color: rgb(222, 232, 186);
+}
+
+.meta:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.meta:hover::after {
+    content:"Metalloid";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.halo {
+    background-color: rgb(255, 253, 122);
+}
+
+.halo:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.halo:hover::after {
+    content:"Halogen";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.nogas {
+    background-color: #fddfae;
+}
+
+.nogas:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.nogas:hover::after {
+    content:"Noble Gas";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.lantha {
+    background-color: rgb(169, 249, 255);
+}
+
+.lantha:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.lantha:hover::after {
+    content:"Lanthanoid";
+    font-size: 1.25vw;
+    color: blue;
+}
+
+.acti {
+    background-color: rgb(171, 252, 225);
+}
+
+.acti:hover {
+    background-color: cyan;
+    font-size: 0;
+}
+
+.acti:hover::after {
+    content:"Actinoid";
+    font-size: 1.25vw;
+    color: blue;
+}
+/* introducing a footer for data protection information to users. */
+footer {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    padding: 0.75px;
+    margin: 0;
+    font-size: 1vw;
+}
